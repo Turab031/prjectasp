@@ -1,0 +1,49 @@
+@using mvcapp.Dto
+@model UserDto
+<div>@ViewBag.Message</div>
+
+<br>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+
+            <div class="card shadow">
+                <div class="card-header text-center">
+                    <h4>Register</h4>
+                </div>
+
+                <div class="card-body">
+                    <form asp-action="RegisterUser">
+
+                        <div class="mb-3">
+                            <label class="form-label">Username</label>
+                            <input type="text" class="form-control" placeholder="Enter username" name="Username"
+                                   asp-for="Username">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="Enter email" name="Email"
+                                       asp-for="Email">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" placeholder="Enter password" name="Password"
+                                           asp-for="Password">
+                                    </div>
+
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-primary">
+                                            Register
+                                        </button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            Already Registered User?Login <a asp-action="RegisterToLogin">Here</a>

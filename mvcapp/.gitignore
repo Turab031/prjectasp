@@ -1,0 +1,134 @@
+############################
+# Build Folders
+############################
+bin/
+obj/
+out/
+publish/
+
+############################
+# User-specific files
+############################
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+############################
+# Visual Studio
+############################
+.vs/
+*.vcxproj.user
+*.dbmdl
+
+############################
+# VS Code
+############################
+.vscode/
+
+############################
+# Rider / JetBrains
+############################
+.idea/
+*.sln.iml
+
+############################
+# Logs
+############################
+*.log
+logs/
+
+############################
+# OS files
+############################
+.DS_Store
+Thumbs.db
+
+############################
+# Environment & Secrets
+############################
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+*.env
+.env.*
+
+############################
+# Certificates
+############################
+*.pfx
+*.crt
+*.key
+
+############################
+# Entity Framework
+############################
+Migrations/*Snapshot.cs
+
+############################
+# Node (if using frontend)
+############################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+############################
+# Package files
+############################
+*.nupkg
+*.snupkg
+
+############################
+# Temporary files
+############################
+*.tmp
+*.temp
+*.cache
+
+############################
+# IIS Express
+############################
+iisexpress/
+
+############################
+# Dotnet watch / Hot reload
+############################
+*.hotreload.json
+
+############################
+# Coverage / Testing
+############################
+coverage/
+*.coverage
+*.coveragexml
+TestResults/
+
+############################
+# Resharper
+############################
+_ReSharper*/
+*.DotSettings.user
+
+############################
+# Backup files
+############################
+*.bak
+*.backup
+
+############################
+# SQL Server local files
+############################
+*.mdf
+*.ldf
+
+############################
+# Docker
+############################
+docker-compose.override.yml
+
+############################
+# Misc
+############################
+*.swp
+*.lock.json
