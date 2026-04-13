@@ -1,0 +1,39 @@
+@using mvcapp.Dto
+@model EmployeeDto
+
+@{
+    ViewData["Title"] = "Add Employee";
+}
+
+<div class="container mt-4">
+
+    <h3>Add Employee</h3>
+
+    <form method="post" asp-action="AddEmployee">
+
+        <div class="mb-3">
+            <label>Name</label>
+            <input type="text" class="form-control" name="EmployeeName" asp-for="EmployeeName" required />
+        </div>
+
+        <div class="mb-3">
+            <label>Department</label>
+            <input type="text" class="form-control" name="Department" asp-for="Department" required />
+        </div>
+
+        <div class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control" name="Email" asp-for="Email" required />
+        </div>
+
+        <div class="mb-3">
+            <label>Designation</label>
+            <input type="text" class="form-control" name="Designation" asp-for="Designation" required />
+        </div>
+
+        <button type="submit" class="btn btn-success">Save</button>
+        <a href="/Dashboard/Index" class="btn btn-secondary">Back</a>
+
+    </form>
+
+</div>

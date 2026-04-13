@@ -9,7 +9,7 @@
     <!-- Top Bar -->
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h3>Employee Dashboard</h3>
-        <a href="#" class="btn btn-success">
+        <a class="btn btn-success" asp-action="RedirectToEmployeeForm">
             + Add Employee
         </a>
     </div>
@@ -31,28 +31,34 @@
 
                 <tbody>
 
-                    <!-- Sample Data Row -->
-                    <tr>
-                        <td>John Doe</td>
-                        <td>IT</td>
-                        <td>john@example.com</td>
-                        <td>Developer</td>
-                        <td>
-                            <a href="#" class="btn btn-sm btn-primary">Edit</a>
-                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
-                        </td>
-                    </tr>
+                    @{
+                        if (Model != null && Model.Count > 0)
+                        {
+                            foreach (var employee in Model)
+                            {
+                                <tr>
+                                    <td>@employee.EmployeeName</td>
+                                    <td>@employee.Department</td>
+                                    <td>@employee.Email</td>
+                                    <td>@employee.Designation</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary" asp-route-id="@employee.Id">Edit</button>
+                                        <button class="btn btn-sm btn-danger" asp-route-id="@employee.Id">Delete</button>
 
-                    <tr>
-                        <td>Jane Smith</td>
-                        <td>HR</td>
-                        <td>jane@example.com</td>
-                        <td>Manager</td>
-                        <td>
-                            <a href="#" class="btn btn-sm btn-primary">Edit</a>
-                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
-                        </td>
-                    </tr>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="5" class="text-center">No employees found</td>
+                            </tr>
+                        }
+                    }
+
+                    
+                   
 
                 </tbody>
             </table>
